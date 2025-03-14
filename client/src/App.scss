@@ -1,0 +1,17 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.header {
+  flex-basis: 10%;
+}
+
+.body {
+  flex-basis: 80%;
+}
+
+.footer {
+  flex-basis: 10%;
+}
