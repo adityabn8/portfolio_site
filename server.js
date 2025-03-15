@@ -9,10 +9,10 @@ const app = express();
 
 app.use(cors());
 app.use(express.json());
-app.use(express.static(path.join(__dirname, 'client/prod-build')));
+app.use(express.static(path.join(__dirname, 'client', 'prod-build')));
 
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'client/prod-build', 'index.html'));
+  res.sendFile(path.join(__dirname, 'client', 'prod-build', 'index.html'));
 });
 
 app.use('/api/users', userRoutes)
