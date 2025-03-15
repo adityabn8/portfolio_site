@@ -3,7 +3,7 @@ import {TabMenu} from 'primereact/tabmenu';
 import { useNavigate } from 'react-router';
 import '../styles/Header.scss';
 
-export default Header  = () => {
+const Header  = () => {
   const [selectedTab, setSelectedTab] = useState("home");
   const navigate = useNavigate();
   const items = [
@@ -54,3 +54,5 @@ export default Header  = () => {
     </div>
   )
 }
+
+export default Header;
