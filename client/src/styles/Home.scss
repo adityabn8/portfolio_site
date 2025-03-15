@@ -1,0 +1,17 @@
+.typewriter {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1.5rem;
+  white-space: nowrap; /* Prevents text wrapping */
+  overflow: hidden;    /* Hides the text after it is typed */
+  border-right: 2px solid black; /* Creates a blinking cursor effect */
+  animation: blink-caret 0.8s step-end infinite;
+}
+
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: black;
+  }
+}
