@@ -1,11 +1,31 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import {Typed} from 'react-typed';
 import '../styles/Home.scss';
 
 const  Home  = () => {
+  const [displayText, setDisplayText] = useState('');
+  const text = "I am a Full Stack Developer";
+
+  useEffect(() => {
+    let i = 0;
+    const typingInterval = setInterval(() => {
+      if (i < text.length) {
+        setDisplayText(prevText => prevText + text.charAt(i));
+        i++;
+      } else {
+        clearInterval(typingInterval);
+      }
+    }, 100);
+
+    return () => {
+      clearInterval(typingInterval);
+    };
+  }, []);
+
   return (
     <div class="typewriter">
-      <span id="dynamic-text">Hi, I am Aditya B N</span>
-  </div>
+      {displayText}
+    </div>
   )
 }
 

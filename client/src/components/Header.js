@@ -47,10 +47,19 @@ const Header  = () => {
             navigate("/Contact");
           }
         }
-    ];
+  ];
   return (
     <div className='main-menu-container'>
-      <TabMenu model={items} />
+      <div className='left-header-bar'></div>
+      <div className='menu-div'>
+        <ul className='center-menu'>
+          {
+            items.map((item) => {
+              return <li id={item.key} className='menu-item' onClick={item.command}>{item.label}</li>
+            })
+          }
+        </ul>
+      </div>
     </div>
   )
 }
